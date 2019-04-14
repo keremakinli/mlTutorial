@@ -21,6 +21,7 @@ class Support_Vector_Machine:
                     all_data.append(feature)
         self.max_feature_value=max(all_data)
         self.min_feature_value=min(all_data)
+        print("all_data: ", all_data)
         all_data=None
         #support vectors yi(xi.w+b)=1
         step_sizes=[
