@@ -1,4 +1,6 @@
 #test files
 test.py
+#cache files
+**/*.pyc
 #test datasets
 iris.csv
