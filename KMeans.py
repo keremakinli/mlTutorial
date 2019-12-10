@@ -8,7 +8,8 @@ from sklearn.model_selection import cross_validate
 import pandas as pd
 df=pd.read_excel('titanic.xls')
 df.drop(['body', 'name'], 1, inplace=True)
-df.convert_objects(convert_numeric=True)
+for i in df:
+    pd.to_numeric(df[i], errors='ignore')
 df.fillna(0, inplace=True)
 def handle_non_numerical_data(df):
     columns=df.columns.values
